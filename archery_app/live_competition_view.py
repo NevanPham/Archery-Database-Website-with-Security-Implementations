@@ -25,11 +25,11 @@ def calculate_win_probability(archer1_stats, archer2_stats):
     # Simple probability based on average scores
     prob = avg1 / (avg1 + avg2)
     
-    # Add some randomness to make it interesting (optional)
+    # Add some randomness to make it interesting
     # We'll keep it mostly determined by scores but add a bit of unpredictability
     prob = prob * 0.8 + np.random.random() * 0.2
     
-    return min(max(prob, 0.1), 0.9)  # Keep between 10-90% for interest
+    return min(max(prob, 0.1), 0.9)  # Keep between 10-90%
 
 def format_percentage(value):
     """Format a decimal probability as a percentage string."""
